@@ -24,16 +24,8 @@ workflows:
         script: |
           cd $CM_BUILD_DIR
           ls -la
-          if [ -f "gradlew" ]; then
-            chmod +x ./gradlew
-            ./gradlew assembleDebug --stacktrace
-          elif [ -f "gradlew.bat" ]; then
-            # Use gradle wrapper for Windows projects
-            gradle assembleDebug --stacktrace
-          else
-            # Use system gradle
-            gradle assembleDebug --stacktrace
-          fi
+          # Use system gradle directly to avoid wrapper issues
+          gradle assembleDebug --stacktrace
     artifacts:
       - app/build/outputs/**/*.apk
       - app/build/outputs/**/mapping.txt
