@@ -4,10 +4,15 @@ workflows:
     max_build_duration: 120
     instance_type: mac_mini_m1
     environment:
+      android_signing:
+      groups:
       vars:
-        PACKAGE_NAME: "com.ticketpos.app"
-      java: 11
-      node: 16
+        JAVA_HOME: /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+        ANDROID_HOME: /usr/local/share/android-sdk
+        ANDROID_SDK_ROOT: /usr/local/share/android-sdk
+      java: 17
+      xcode: latest
+      cocoapods: default
     scripts:
       - name: Set up local.properties
         script: |
@@ -24,8 +29,12 @@ workflows:
         script: |
           cd $CM_BUILD_DIR
           ls -la
-          # Use system gradle directly to avoid wrapper issues
-          gradle assembleDebug --stacktrace
+          echo "Java version:"
+          java -version
+          echo "Gradle version:"
+          gradle --version
+          echo "Starting build..."
+          gradle assembleDebug --stacktrace --info
     artifacts:
       - app/build/outputs/**/*.apk
       - app/build/outputs/**/mapping.txt
