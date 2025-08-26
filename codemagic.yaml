@@ -23,8 +23,17 @@ workflows:
       - name: Build APK with Gradle
         script: |
           cd $CM_BUILD_DIR
-          chmod +x ./gradlew
-          ./gradlew assembleDebug --stacktrace
+          ls -la
+          if [ -f "gradlew" ]; then
+            chmod +x ./gradlew
+            ./gradlew assembleDebug --stacktrace
+          elif [ -f "gradlew.bat" ]; then
+            # Use gradle wrapper for Windows projects
+            gradle assembleDebug --stacktrace
+          else
+            # Use system gradle
+            gradle assembleDebug --stacktrace
+          fi
     artifacts:
       - app/build/outputs/**/*.apk
       - app/build/outputs/**/mapping.txt
