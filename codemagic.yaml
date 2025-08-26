@@ -1,7 +1,7 @@
 workflows:
   android-workflow:
     name: Android Workflow
-    max_build_duration: 120
+    max_build_duration: 180
     instance_type: mac_mini_m1
     environment:
       android_signing:
@@ -33,7 +33,8 @@ workflows:
           echo "Gradle version:"
           gradle --version
           echo "Starting build..."
-          gradle assembleDebug --stacktrace --info
+          gradle clean
+          gradle assembleDebug --stacktrace --debug --no-daemon
     artifacts:
       - app/build/outputs/**/*.apk
       - app/build/outputs/**/mapping.txt
