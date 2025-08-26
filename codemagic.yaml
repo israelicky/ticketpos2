@@ -4,13 +4,8 @@ workflows:
     max_build_duration: 120
     instance_type: mac_mini_m1
     environment:
-      android_signing:
-        - keystore_reference
-      groups:
-        - google_play
       vars:
         PACKAGE_NAME: "com.ticketpos.app"
-        GOOGLE_PLAY_TRACK: internal
       java: 11
       node: 16
     scripts:
@@ -21,13 +16,10 @@ workflows:
         script: |
           # Skip Flutter since this is Android native
           echo "Skipping Flutter - Android native project"
-      - name: Set up key.properties
+      - name: Set up debug keystore
         script: |
-          # Create key.properties for signing (optional)
-          echo 'storePassword=android' > android/key.properties
-          echo 'keyPassword=android' >> android/key.properties
-          echo 'keyAlias=androiddebugkey' >> android/key.properties
-          echo 'storeFile=debug.keystore' >> android/key.properties
+          # Use default debug keystore for unsigned APK
+          echo "Using default debug keystore for development build"
       - name: Build APK with Gradle
         script: |
           cd $CM_BUILD_DIR
