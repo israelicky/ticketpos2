@@ -5,7 +5,6 @@ workflows:
     instance_type: mac_mini_m1
     environment:
       android_signing:
-      groups:
       vars:
         JAVA_HOME: /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
         ANDROID_HOME: /usr/local/share/android-sdk
