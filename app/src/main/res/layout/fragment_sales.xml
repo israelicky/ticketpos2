@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.sales.SalesFragment">
+
+    <!-- Header Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewTodayTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total del día: $0.00"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimary" />
+
+            <TextView
+                android:id="@+id/textViewTodayCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="0 ventas"
+                android:textSize="14sp"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonViewHistory"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Ver Historial" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Sales List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSales"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        tools:listitem="@layout/item_sale" />
+
+    <!-- Empty State -->
+    <TextView
+        android:id="@+id/textViewEmptyState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No hay ventas registradas hoy"
+        android:textSize="16sp"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:visibility="gone" />
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNewSale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="Nueva Venta"
+        app:srcCompat="@drawable/ic_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

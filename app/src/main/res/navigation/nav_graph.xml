@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_sales">
+
+    <!-- Sales Fragment -->
+    <fragment
+        android:id="@+id/navigation_sales"
+        android:name="com.ticketpos.app.ui.sales.SalesFragment"
+        android:label="@string/navigation_sales"
+        tools:layout="@layout/fragment_sales">
+        
+        <action
+            android:id="@+id/action_sales_to_new_sale"
+            app:destination="@id/action_new_sale" />
+        
+        <action
+            android:id="@+id/action_sales_to_sale_history"
+            app:destination="@id/action_sale_history" />
+    </fragment>
+
+    <!-- Inventory Fragment -->
+    <fragment
+        android:id="@+id/navigation_inventory"
+        android:name="com.ticketpos.app.ui.inventory.InventoryFragment"
+        android:label="@string/navigation_inventory"
+        tools:layout="@layout/fragment_inventory">
+        
+        <action
+            android:id="@+id/action_inventory_to_add_product"
+            app:destination="@id/action_add_product" />
+        
+        <action
+            android:id="@+id/action_inventory_to_product_details"
+            app:destination="@id/action_product_details" />
+        
+        <action
+            android:id="@+id/action_inventory_to_category_management"
+            app:destination="@id/action_category_management" />
+    </fragment>
+
+    <!-- Reports Fragment -->
+    <fragment
+        android:id="@+id/navigation_reports"
+        android:name="com.ticketpos.app.ui.reports.ReportsFragment"
+        android:label="@string/navigation_reports"
+        tools:layout="@layout/fragment_reports">
+        
+        <action
+            android:id="@+id/action_reports_to_sales_report"
+            app:destination="@id/action_sales_report" />
+        
+        <action
+            android:id="@+id/action_reports_to_inventory_report"
+            app:destination="@id/action_inventory_report" />
+        
+        <action
+            android:id="@+id/action_reports_to_customer_report"
+            app:destination="@id/action_customer_report" />
+        
+        <action
+            android:id="@+id/action_reports_to_financial_report"
+            app:destination="@id/action_financial_report" />
+    </fragment>
+
+    <!-- Settings Fragment -->
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.ticketpos.app.ui.settings.SettingsFragment"
+        android:label="@string/navigation_settings"
+        tools:layout="@layout/fragment_settings">
+        
+        <action
+            android:id="@+id/action_settings_to_user_management"
+            app:destination="@id/action_user_management" />
+        
+        <action
+            android:id="@+id/action_settings_to_company_settings"
+            app:destination="@id/action_company_settings" />
+        
+        <action
+            android:id="@+id/action_settings_to_printer_settings"
+            app:destination="@id/action_printer_settings" />
+        
+        <action
+            android:id="@+id/action_settings_to_payment_settings"
+            app:destination="@id/action_payment_settings" />
+        
+        <action
+            android:id="@+id/action_settings_to_database_settings"
+            app:destination="@id/action_database_settings" />
+    </fragment>
+
+    <!-- New Sale Activity -->
+    <activity
+        android:id="@+id/action_new_sale"
+        android:name="com.ticketpos.app.ui.sale.SaleActivity"
+        android:label="@string/sales_title"
+        app:launchSingleTop="true" />
+
+    <!-- Sale History Activity -->
+    <activity
+        android:id="@+id/action_sale_history"
+        android:name="com.ticketpos.app.ui.sales.SaleHistoryActivity"
+        android:label="Historial de Ventas"
+        app:launchSingleTop="true" />
+
+    <!-- Add/Edit Product Activity -->
+    <activity
+        android:id="@+id/action_add_product"
+        android:name="com.ticketpos.app.ui.product.AddEditProductActivity"
+        android:label="@string/add_new_product"
+        app:launchSingleTop="true" />
+
+    <!-- Product Details Activity -->
+    <activity
+        android:id="@+id/action_product_details"
+        android:name="com.ticketpos.app.ui.product.ProductDetailsActivity"
+        android:label="Detalles del Producto"
+        app:launchSingleTop="true" />
+
+    <!-- Category Management Activity -->
+    <activity
+        android:id="@+id/action_category_management"
+        android:name="com.ticketpos.app.ui.inventory.CategoryManagementActivity"
+        android:label="Gestión de Categorías"
+        app:launchSingleTop="true" />
+
+    <!-- Sales Report Activity -->
+    <activity
+        android:id="@+id/action_sales_report"
+        android:name="com.ticketpos.app.ui.reports.SalesReportActivity"
+        android:label="@string/sales_reports"
+        app:launchSingleTop="true" />
+
+    <!-- Inventory Report Activity -->
+    <activity
+        android:id="@+id/action_inventory_report"
+        android:name="com.ticketpos.app.ui.reports.InventoryReportActivity"
+        android:label="@string/inventory_reports"
+        app:launchSingleTop="true" />
+
+    <!-- Customer Report Activity -->
+    <activity
+        android:id="@+id/action_customer_report"
+        android:name="com.ticketpos.app.ui.reports.CustomerReportActivity"
+        android:label="Reportes de Clientes"
+        app:launchSingleTop="true" />
+
+    <!-- Financial Report Activity -->
+    <activity
+        android:id="@+id/action_financial_report"
+        android:name="com.ticketpos.app.ui.reports.FinancialReportActivity"
+        android:label="Reportes Financieros"
+        app:launchSingleTop="true" />
+
+    <!-- User Management Activity -->
+    <activity
+        android:id="@+id/action_user_management"
+        android:name="com.ticketpos.app.ui.settings.UserManagementActivity"
+        android:label="@string/user_management"
+        app:launchSingleTop="true" />
+
+    <!-- Company Settings Activity -->
+    <activity
+        android:id="@+id/action_company_settings"
+        android:name="com.ticketpos.app.ui.settings.CompanySettingsActivity"
+        android:label="@string/company_settings"
+        app:launchSingleTop="true" />
+
+    <!-- Printer Settings Activity -->
+    <activity
+        android:id="@+id/action_printer_settings"
+        android:name="com.ticketpos.app.ui.settings.PrinterSettingsActivity"
+        android:label="@string/printer_settings"
+        app:launchSingleTop="true" />
+
+    <!-- Payment Settings Activity -->
+    <activity
+        android:id="@+id/action_payment_settings"
+        android:name="com.ticketpos.app.ui.settings.PaymentSettingsActivity"
+        android:label="@string/payment_settings"
+        app:launchSingleTop="true" />
+
+    <!-- Database Settings Activity -->
+    <activity
+        android:id="@+id/action_database_settings"
+        android:name="com.ticketpos.app.ui.settings.DatabaseSettingsActivity"
+        android:label="@string/database_settings"
+        app:launchSingleTop="true" />
+
+    <!-- Payment Activity -->
+    <activity
+        android:id="@+id/action_payment"
+        android:name="com.ticketpos.app.ui.payment.PaymentActivity"
+        android:label="@string/payment_title"
+        app:launchSingleTop="true" />
+
+    <!-- Receipt Activity -->
+    <activity
+        android:id="@+id/action_receipt"
+        android:name="com.ticketpos.app.ui.receipt.ReceiptActivity"
+        android:label="@string/receipt_title"
+        app:launchSingleTop="true" />
+
+    <!-- Customer Management Activity -->
+    <activity
+        android:id="@+id/action_customer_management"
+        android:name="com.ticketpos.app.ui.customer.CustomerManagementActivity"
+        android:label="Gestión de Clientes"
+        app:launchSingleTop="true" />
+
+    <!-- Supplier Management Activity -->
+    <activity
+        android:id="@+id/action_supplier_management"
+        android:name="com.ticketpos.app.ui.supplier.SupplierManagementActivity"
+        android:label="Gestión de Proveedores"
+        app:launchSingleTop="true" />
+
+    <!-- Backup/Restore Activity -->
+    <activity
+        android:id="@+id/action_backup_restore"
+        android:name="com.ticketpos.app.ui.settings.BackupRestoreActivity"
+        android:label="Respaldo y Restauración"
+        app:launchSingleTop="true" />
+
+    <!-- Help Activity -->
+    <activity
+        android:id="@+id/action_help"
+        android:name="com.ticketpos.app.ui.help.HelpActivity"
+        android:label="Ayuda"
+        app:launchSingleTop="true" />
+
+    <!-- About Activity -->
+    <activity
+        android:id="@+id/action_about"
+        android:name="com.ticketpos.app.ui.about.AboutActivity"
+        android:label="@string/about"
+        app:launchSingleTop="true" />
+
+</navigation>

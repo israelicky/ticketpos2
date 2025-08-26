@@ -1,0 +1,46 @@
+workflows:
+  android-workflow:
+    name: Android Workflow
+    max_build_duration: 120
+    instance_type: mac_mini_m1
+    environment:
+      android_signing:
+        - keystore_reference
+      groups:
+        - google_play
+      vars:
+        PACKAGE_NAME: "com.ticketpos.app"
+        GOOGLE_PLAY_TRACK: internal
+      java: 11
+      node: 16
+    scripts:
+      - name: Set up local.properties
+        script: |
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
+      - name: Get Flutter packages
+        script: |
+          # Skip Flutter since this is Android native
+          echo "Skipping Flutter - Android native project"
+      - name: Set up key.properties
+        script: |
+          # Create key.properties for signing (optional)
+          echo 'storePassword=android' > android/key.properties
+          echo 'keyPassword=android' >> android/key.properties
+          echo 'keyAlias=androiddebugkey' >> android/key.properties
+          echo 'storeFile=debug.keystore' >> android/key.properties
+      - name: Build APK with Gradle
+        script: |
+          cd $CM_BUILD_DIR
+          chmod +x ./gradlew
+          ./gradlew assembleDebug --stacktrace
+    artifacts:
+      - app/build/outputs/**/*.apk
+      - app/build/outputs/**/mapping.txt
+      - app/build/outputs/**/*.aab
+    publishing:
+      email:
+        recipients:
+          - user@example.com
+        notify:
+          success: true
+          failure: false

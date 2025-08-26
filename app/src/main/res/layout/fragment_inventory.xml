@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.inventory.InventoryFragment">
+
+    <!-- Header Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inventario"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimary" />
+
+            <TextView
+                android:id="@+id/textViewLowStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="0 productos con stock bajo"
+                android:textSize="14sp"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Products List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProducts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        tools:listitem="@layout/item_inventory" />
+
+    <!-- Empty State -->
+    <TextView
+        android:id="@+id/textViewEmptyState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No hay productos en el inventario"
+        android:textSize="16sp"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:visibility="gone" />
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="Agregar Producto"
+        app:srcCompat="@drawable/ic_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

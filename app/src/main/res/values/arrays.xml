@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Currency arrays -->
+    <string-array name="currency_entries">
+        <item>USD - Dólar Estadounidense</item>
+        <item>EUR - Euro</item>
+        <item>MXN - Peso Mexicano</item>
+        <item>COP - Peso Colombiano</item>
+        <item>ARS - Peso Argentino</item>
+        <item>CLP - Peso Chileno</item>
+        <item>PEN - Sol Peruano</item>
+    </string-array>
+
+    <string-array name="currency_values">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>MXN</item>
+        <item>COP</item>
+        <item>ARS</item>
+        <item>CLP</item>
+        <item>PEN</item>
+    </string-array>
+
+    <!-- Language arrays -->
+    <string-array name="language_entries">
+        <item>Español</item>
+        <item>English</item>
+        <item>Português</item>
+        <item>Français</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>es</item>
+        <item>en</item>
+        <item>pt</item>
+        <item>fr</item>
+    </string-array>
+
+    <!-- Printer type arrays -->
+    <string-array name="printer_type_entries">
+        <item>Impresora Térmica</item>
+        <item>Impresora de Tinta</item>
+        <item>Impresora Láser</item>
+        <item>Impresora Bluetooth</item>
+        <item>Impresora USB</item>
+    </string-array>
+
+    <string-array name="printer_type_values">
+        <item>thermal</item>
+        <item>inkjet</item>
+        <item>laser</item>
+        <item>bluetooth</item>
+        <item>usb</item>
+    </string-array>
+
+    <!-- Sync frequency arrays -->
+    <string-array name="sync_frequency_entries">
+        <item>Manual</item>
+        <item>Cada 15 minutos</item>
+        <item>Cada 30 minutos</item>
+        <item>Cada hora</item>
+        <item>Cada 6 horas</item>
+        <item>Diariamente</item>
+    </string-array>
+
+    <string-array name="sync_frequency_values">
+        <item>manual</item>
+        <item>15min</item>
+        <item>30min</item>
+        <item>1hour</item>
+        <item>6hours</item>
+        <item>daily</item>
+    </string-array>
+
+    <!-- Backup frequency arrays -->
+    <string-array name="backup_frequency_entries">
+        <item>Manual</item>
+        <item>Diariamente</item>
+        <item>Semanalmente</item>
+        <item>Mensualmente</item>
+    </string-array>
+
+    <string-array name="backup_frequency_values">
+        <item>manual</item>
+        <item>daily</item>
+        <item>weekly</item>
+        <item>monthly</item>
+    </string-array>
+</resources>

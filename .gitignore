@@ -1,0 +1,32 @@
+# Gradle files
+.gradle/
+build/
+*/build/
+
+# Local configuration files
+local.properties
+
+# IntelliJ/Android Studio project files
+.idea/
+*.iml
+
+# Log files
+*.log
+
+# Android generated files and folders
+captures/
+output.json
+
+# NDK
+.externalNativeBuild
+
+# Keystore files (no subas tus claves de firma)
+*.jks
+*.keystore
+
+# Crashlytics/Fabric
+crashlytics.properties
+fabric.properties
+
+# Misc
+.DS_Store

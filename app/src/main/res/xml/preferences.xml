@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Company Settings Section -->
+    <PreferenceCategory
+        android:title="@string/company_settings"
+        android:iconSpaceReserved="false">
+
+        <EditTextPreference
+            android:key="company_name"
+            android:title="@string/company_name"
+            android:summary="Nombre de tu empresa"
+            android:defaultValue="Mi Empresa" />
+
+        <EditTextPreference
+            android:key="tax_rate"
+            android:title="@string/tax_rate"
+            android:summary="Porcentaje de impuesto aplicado"
+            android:defaultValue="16"
+            android:inputType="numberDecimal" />
+
+        <ListPreference
+            android:key="currency"
+            android:title="@string/currency"
+            android:summary="Moneda principal del sistema"
+            android:defaultValue="MXN"
+            android:entries="@array/currency_entries"
+            android:entryValues="@array/currency_values" />
+
+        <ListPreference
+            android:key="language"
+            android:title="@string/language"
+            android:summary="Idioma de la aplicación"
+            android:defaultValue="es"
+            android:entries="@array/language_entries"
+            android:entryValues="@array/language_values" />
+
+    </PreferenceCategory>
+
+    <!-- Receipt Settings Section -->
+    <PreferenceCategory
+        android:title="@string/receipt_settings"
+        android:iconSpaceReserved="false">
+
+        <EditTextPreference
+            android:key="receipt_header"
+            android:title="@string/receipt_header"
+            android:summary="Texto del encabezado del recibo"
+            android:defaultValue="¡Gracias por su compra!" />
+
+        <EditTextPreference
+            android:key="receipt_footer"
+            android:title="@string/receipt_footer"
+            android:summary="Texto del pie del recibo"
+            android:defaultValue="Vuelva pronto" />
+
+        <SwitchPreference
+            android:key="show_logo_on_receipt"
+            android:title="Mostrar logo en recibo"
+            android:summary="Incluir logo de la empresa en los recibos"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="show_tax_breakdown"
+            android:title="Mostrar desglose de impuestos"
+            android:summary="Mostrar detalle de impuestos en recibos"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <!-- Printer Settings Section -->
+    <PreferenceCategory
+        android:title="@string/printer_settings"
+        android:iconSpaceReserved="false">
+
+        <Preference
+            android:key="printer_settings"
+            android:title="Configurar Impresora"
+            android:summary="Configurar impresora térmica o de red" />
+
+        <SwitchPreference
+            android:key="auto_print_receipts"
+            android:title="Imprimir recibos automáticamente"
+            android:summary="Imprimir recibo después de cada venta"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="printer_type"
+            android:title="Tipo de Impresora"
+            android:summary="Seleccionar tipo de impresora"
+            android:defaultValue="thermal"
+            android:entries="@array/printer_type_entries"
+            android:entryValues="@array/printer_type_values" />
+
+    </PreferenceCategory>
+
+    <!-- Payment Settings Section -->
+    <PreferenceCategory
+        android:title="@string/payment_settings"
+        android:iconSpaceReserved="false">
+
+        <Preference
+            android:key="payment_settings"
+            android:title="Configurar Pagos"
+            android:summary="Configurar métodos de pago y terminales" />
+
+        <SwitchPreference
+            android:key="enable_card_payments"
+            android:title="Habilitar pagos con tarjeta"
+            android:summary="Permitir pagos con tarjeta de crédito/débito"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="enable_cash_payments"
+            android:title="Habilitar pagos en efectivo"
+            android:summary="Permitir pagos en efectivo"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="enable_transfer_payments"
+            android:title="Habilitar transferencias"
+            android:summary="Permitir pagos por transferencia bancaria"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <!-- User Management Section -->
+    <PreferenceCategory
+        android:title="@string/user_management"
+        android:iconSpaceReserved="false">
+
+        <Preference
+            android:key="user_management"
+            android:title="Gestión de Usuarios"
+            android:summary="Administrar usuarios y permisos del sistema" />
+
+        <SwitchPreference
+            android:key="require_login"
+            android:title="Requerir inicio de sesión"
+            android:summary="Solicitar credenciales para usar la aplicación"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="auto_logout"
+            android:title="Cerrar sesión automáticamente"
+            android:summary="Cerrar sesión después de inactividad"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <!-- Database Settings Section -->
+    <PreferenceCategory
+        android:title="@string/database_settings"
+        android:iconSpaceReserved="false">
+
+        <Preference
+            android:key="database_settings"
+            android:title="Configuración de Base de Datos"
+            android:summary="Configurar base de datos y sincronización" />
+
+        <SwitchPreference
+            android:key="auto_sync"
+            android:title="Sincronización automática"
+            android:summary="Sincronizar datos automáticamente"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="sync_frequency"
+            android:title="Frecuencia de sincronización"
+            android:summary="Cada cuánto sincronizar datos"
+            android:defaultValue="daily"
+            android:entries="@array/sync_frequency_entries"
+            android:entryValues="@array/sync_frequency_values" />
+
+    </PreferenceCategory>
+
+    <!-- Backup Settings Section -->
+    <PreferenceCategory
+        android:title="@string/backup_settings"
+        android:iconSpaceReserved="false">
+
+        <SwitchPreference
+            android:key="auto_backup"
+            android:title="@string/auto_backup"
+            android:summary="Realizar respaldos automáticos"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="backup_frequency"
+            android:title="@string/backup_frequency"
+            android:summary="Frecuencia de respaldos automáticos"
+            android:defaultValue="daily"
+            android:entries="@array/backup_frequency_entries"
+            android:entryValues="@array/backup_frequency_values" />
+
+        <SwitchPreference
+            android:key="backup_to_cloud"
+            android:title="Respaldo en la nube"
+            android:summary="Guardar respaldos en servicios en la nube"
+            android:defaultValue="false" />
+
+        <EditTextPreference
+            android:key="backup_retention_days"
+            android:title="Días de retención"
+            android:summary="Mantener respaldos por X días"
+            android:defaultValue="30"
+            android:inputType="number" />
+
+    </PreferenceCategory>
+
+    <!-- System Section -->
+    <PreferenceCategory
+        android:title="Sistema"
+        android:iconSpaceReserved="false">
+
+        <SwitchPreference
+            android:key="debug_mode"
+            android:title="Modo debug"
+            android:summary="Habilitar logs de depuración"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="analytics"
+            android:title="Analytics"
+            android:summary="Enviar datos de uso anónimos"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="notifications"
+            android:title="Notificaciones"
+            android:summary="Recibir notificaciones del sistema"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <!-- About Section -->
+    <PreferenceCategory
+        android:title="Información"
+        android:iconSpaceReserved="false">
+
+        <Preference
+            android:key="about"
+            android:title="@string/about"
+            android:summary="Información sobre la aplicación" />
+
+        <Preference
+            android:key="version"
+            android:title="Versión"
+            android:summary="1.0.0"
+            android:selectable="false" />
+
+        <Preference
+            android:key="help"
+            android:title="Ayuda"
+            android:summary="Manual de usuario y soporte" />
+
+        <Preference
+            android:key="feedback"
+            android:title="Enviar comentarios"
+            android:summary="Reportar problemas o sugerencias" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

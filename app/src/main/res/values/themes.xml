@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.TicketPOS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="android:windowLightStatusBar">false</item>
+        
+        <!-- Navigation bar color -->
+        <item name="android:navigationBarColor">@color/navigation_bar</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        
+        <!-- Divider color -->
+        <item name="android:dividerHorizontal">@color/divider</item>
+    </style>
+
+    <!-- Splash screen theme -->
+    <style name="Theme.TicketPOS.Splash" parent="Theme.TicketPOS">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- Color state lists -->
+    <color name="bottom_navigation_item_color">@color/bottom_navigation_item_color_selector</color>
+    <color name="switch_thumb_color">@color/switch_thumb_color_selector</color>
+    <color name="switch_track_color">@color/switch_track_color_selector</color>
+</resources>

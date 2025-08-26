@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.reports.ReportsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Today's Sales Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ventas de Hoy"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <TextView
+                    android:id="@+id/textViewTodaySales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="$0.00"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Month Sales Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ventas del Mes"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <TextView
+                    android:id="@+id/textViewMonthSales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="$0.00"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Products Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Productos"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <TextView
+                    android:id="@+id/textViewTotalProducts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="0 productos"
+                    android:textSize="18sp"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Report Options -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Reportes Detallados"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface" />
+
+        <!-- Sales Report Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSalesReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Reporte de Ventas"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=">"
+                    android:textSize="18sp"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Inventory Report Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardInventoryReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Reporte de Inventario"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=">"
+                    android:textSize="18sp"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Financial Report Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFinancialReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Reporte Financiero"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=">"
+                    android:textSize="18sp"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

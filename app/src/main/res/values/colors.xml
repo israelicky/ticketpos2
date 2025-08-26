@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#1976D2</color>
+    <color name="primary_dark">#1565C0</color>
+    <color name="primary_variant">#0D47A1</color>
+    <color name="primary_light">#BBDEFB</color>
+    
+    <!-- Secondary Colors -->
+    <color name="secondary">#FF9800</color>
+    <color name="secondary_dark">#F57C00</color>
+    <color name="secondary_variant">#E65100</color>
+    <color name="secondary_light">#FFE0B2</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent">#4CAF50</color>
+    <color name="accent_dark">#388E3C</color>
+    <color name="accent_light">#C8E6C9</color>
+    
+    <!-- Success Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="success_dark">#388E3C</color>
+    <color name="success_light">#C8E6C9</color>
+    
+    <!-- Warning Colors -->
+    <color name="warning">#FF9800</color>
+    <color name="warning_dark">#F57C00</color>
+    <color name="warning_light">#FFE0B2</color>
+    
+    <!-- Error Colors -->
+    <color name="error">#F44336</color>
+    <color name="error_dark">#D32F2F</color>
+    <color name="error_light">#FFCDD2</color>
+    
+    <!-- Info Colors -->
+    <color name="info">#2196F3</color>
+    <color name="info_dark">#1976D2</color>
+    <color name="info_light">#BBDEFB</color>
+    
+    <!-- Neutral Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    
+    <!-- Gray Scale -->
+    <color name="gray_50">#FAFAFA</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_800">#424242</color>
+    <color name="gray_900">#212121</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_disabled">#BDBDBD</color>
+    <color name="text_hint">#9E9E9E</color>
+    
+    <!-- Background Colors -->
+    <color name="background">#FAFAFA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="card_background">#FFFFFF</color>
+    
+    <!-- Divider Colors -->
+    <color name="divider">#E0E0E0</color>
+    <color name="divider_dark">#BDBDBD</color>
+    
+    <!-- Status Bar Colors -->
+    <color name="status_bar">#1565C0</color>
+    <color name="status_bar_light">#BBDEFB</color>
+    
+    <!-- Navigation Bar Colors -->
+    <color name="navigation_bar">#FFFFFF</color>
+    <color name="navigation_bar_dark">#212121</color>
+    
+    <!-- Material Design Colors -->
+    <color name="material_red">#F44336</color>
+    <color name="material_pink">#E91E63</color>
+    <color name="material_purple">#9C27B0</color>
+    <color name="material_deep_purple">#673AB7</color>
+    <color name="material_indigo">#3F51B5</color>
+    <color name="material_blue">#2196F3</color>
+    <color name="material_light_blue">#03A9F4</color>
+    <color name="material_cyan">#00BCD4</color>
+    <color name="material_teal">#009688</color>
+    <color name="material_green">#4CAF50</color>
+    <color name="material_light_green">#8BC34A</color>
+    <color name="material_lime">#CDDC39</color>
+    <color name="material_yellow">#FFEB3B</color>
+    <color name="material_amber">#FFC107</color>
+    <color name="material_orange">#FF9800</color>
+    <color name="material_deep_orange">#FF5722</color>
+    <color name="material_brown">#795548</color>
+    <color name="material_grey">#9E9E9E</color>
+    <color name="material_blue_grey">#607D8B</color>
+    
+    <!-- Custom App Colors -->
+    <color name="app_primary">#1976D2</color>
+    <color name="app_secondary">#FF9800</color>
+    <color name="app_accent">#4CAF50</color>
+    <color name="app_background">#FAFAFA</color>
+    <color name="app_surface">#FFFFFF</color>
+    <color name="app_text_primary">#212121</color>
+    <color name="app_text_secondary">#757575</color>
+    <color name="app_divider">#E0E0E0</color>
+    
+    <!-- Sales Colors -->
+    <color name="sale_success">#4CAF50</color>
+    <color name="sale_pending">#FF9800</color>
+    <color name="sale_cancelled">#F44336</color>
+    <color name="sale_refunded">#9C27B0</color>
+    
+    <!-- Inventory Colors -->
+    <color name="stock_high">#4CAF50</color>
+    <color name="stock_medium">#FF9800</color>
+    <color name="stock_low">#F44336</color>
+    <color name="stock_out">#9E9E9E</color>
+    
+    <!-- Payment Colors -->
+    <color name="payment_cash">#4CAF50</color>
+    <color name="payment_card">#2196F3</color>
+    <color name="payment_transfer">#9C27B0</color>
+    <color name="payment_pending">#FF9800</color>
+    <color name="payment_failed">#F44336</color>
+</resources>
